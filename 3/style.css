@@ -125,10 +125,10 @@ nav {
   text-align: left;
 }
 .features-row {
-  margin-top: 40px;
+  margin-top: 30px;
   margin-bottom: 25px;
-  margin-left: 30px;
-  padding: 120px;
+  margin-left: 50px;
+  padding: 130px;
   display: flex;
   float: left;
   justify-content: space-between;
@@ -143,5 +143,5 @@ nav {
   word-spacing: 2px;
   line-height: 23px;
   color: rgb(145, 149, 153);
-  margin-right: 65px;
+  margin-right: 70px;
 }
