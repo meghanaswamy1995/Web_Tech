@@ -1,0 +1,248 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.header {
+  position: absolute;
+  height: 35px;
+  padding-top: 10px;
+  padding-left: 13px;
+  width: 100%;
+  background-color: rgb(241, 237, 239);
+  text-align: left;
+  top: 0;
+  font-size: 20px;
+}
+.footer {
+  position: fixed;
+  height: 30px;
+  width: 100%;
+  padding: 7px;
+  background-color: rgb(40, 40, 46);
+  font-size: 19px;
+  text-align: center;
+  margin-top: 50px;
+  color: rgba(178, 177, 179, 0.979);
+  bottom: 0;
+}
+.footer img {
+  width: 20px;
+  height: 20px;
+}
+.footer a {
+  text-decoration: none;
+  color: rgba(178, 177, 179, 0.979);
+}
+#artSearch {
+  width: 400px;
+  height: 100px;
+  top: 10vh;
+}
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-bar {
+  width: 700px;
+  height: 20px;
+  display: flex;
+  top: 8%;
+  align-items: center;
+  position: absolute;
+  border-radius: 60px;
+  padding: 10px;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 50px;
+  border-color: rgb(200, 200, 200);
+}
+.search-bar input {
+  background: none;
+  outline: none;
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding: 12px 5px;
+  font-size: 20px;
+}
+.search-bar input img {
+  background: none;
+  opacity: 0.4;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 0px;
+  cursor: pointer;
+}
+.search-container :focus {
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 50px;
+  border-color: chocolate;
+}
+
+.myClickState {
+  border-color: lime;
+}
+.search-bar button img {
+  width: 25px;
+}
+.search-bar button {
+  background: none;
+  opacity: 0.4;
+  border: 0;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 0px;
+  cursor: pointer;
+}
+.lens img {
+  width: 120px;
+  height: 30px;
+}
+.lens:hover {
+  opacity: 1;
+}
+.clear:hover {
+  opacity: 1;
+}
+.lens:focus {
+  border: none;
+}
+.clear:focus {
+  border: none;
+  outline: none;
+}
+.artistsListContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.artistsContainer {
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+  width: 1200px;
+  height: 350px;
+  /* background-color: antiquewhite; */
+  margin-top: 180px;
+  /* margin-left: 500px; */
+  padding: 0px 0px;
+  white-space: nowrap;
+}
+.artistsContainer ul {
+  display: flex;
+  width: 1200px;
+}
+.artistsContainer ul button {
+  margin-right: 5px;
+  width: 250px;
+  height: 98%;
+  background-color: #205375;
+  list-style-type: none;
+  text-align: center;
+}
+.artistsContainer::-webkit-scrollbar {
+  width: 2px;
+}
+
+.artistsContainer::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.artistsContainer::-webkit-scrollbar-thumb {
+  background: rgb(195, 192, 192);
+}
+
+.artistsContainer::-webkit-scrollbar-thumb:hover {
+  background: rgb(143, 142, 142);
+}
+
+.artistsContainer ul button:hover {
+  background-color: #112b3c;
+}
+.artistsContainer ul button img {
+  width: 220px;
+  height: 220px;
+  margin-top: 0px;
+  margin-right: 5px;
+  margin-left: 5px;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 50%;
+  border-color: white;
+}
+.artistsContainer ul button h2 {
+  font-weight: normal;
+  font-size: 22px;
+  margin-top: 15px;
+  color: white;
+}
+.artistsContainer ul button p {
+  font-weight: normal;
+  margin-top: 20px;
+  text-align: left;
+  display: none;
+}
+/* #emptyListContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15%;
+} */
+/* #emptyList {
+  /* margin-left: 700px; 
+  border-radius: 25px;
+  margin-top: 0px;
+  padding: 15px;
+  width: 800px;
+  height: 30px;
+  background-color: rgba(211, 210, 210, 0.849);
+  font-size: 25px;
+  text-align: center;
+  align-items: center; 
+} */
+#emptydiv {
+  display: flex;
+  width: 700px;
+  border-radius: 25px;
+  margin-top: 0px;
+  padding: 10px;
+  height: 20px;
+  background-color: rgba(211, 210, 210, 0.849);
+  font-size: 20px;
+  text-align: center;
+  margin-left: auto;
+  align-items: center;
+}
+#artistInfoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#artistBio {
+  justify-content: center;
+  width: 900px;
+  height: 800px;
+  text-align: center;
+  background: none;
+  margin: auto;
+  margin-top: 20px;
+}
+#artistBio h2 {
+  font-weight: normal;
+}
+
+#artistBio h3 {
+  font-weight: normal;
+}
+#artistBio p {
+  margin-top: 10px;
+  font-size: 13px;
+  text-align: justify;
+}
