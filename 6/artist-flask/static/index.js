@@ -11,7 +11,7 @@ const loadCharacters = async (target) => {
     try {
 
       // Making our connection  
-      //var url = 'http://localhost:8080/search/artists/'+target;   
+      //var url = 'http://localhost:8080/search/artists/'+target;    
       var url = 'http://artistsweb-351508.wl.r.appspot.com/search/artists/'+target;
       
       xhr.open('GET', url, true);
