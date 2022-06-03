@@ -1,0 +1,251 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.header {
+  position: absolute;
+  height: 35px; 
+  padding-top: 10px;
+  padding-left: 13px;
+  width: 100%;
+  background-color: rgb(241, 237, 239);
+  text-align: left;
+  top: 0;
+  font-size: 20px;
+}
+.footer {
+  position: fixed;
+  height: 22px; 
+  width: 100%;
+  padding: 7px;
+  background-color: rgb(23, 27, 39); 
+  font-size: 17px; 
+  text-align: center;
+  margin-top: 50px;
+  color: rgba(178, 177, 179, 0.979);
+  bottom: 0;
+}
+.footer img {
+  width: 20px;
+  height: 20px;
+}
+.footer a {
+  text-decoration: none;
+  color: rgba(178, 177, 179, 0.979);
+}
+#artSearch {
+  width: 400px;
+  height: 100px;
+  top: 10vh;
+}
+.search-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+.search-bar {
+  width: 650px;
+  height: 20px;
+  display: flex;
+  top: 8%;
+  align-items: center;
+  position: absolute;
+  padding: 10px;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 20px; 
+  border-color: rgb(200, 200, 200);  
+}
+.search-bar input {
+  background: none;
+  outline: none;
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding: 12px 5px;
+  font-size: 20px;
+}
+.search-bar input img {
+  background: none;
+  opacity: 0.4;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 0px;
+  cursor: pointer;
+}
+form {
+  border: 1px solid;
+  color: gray;
+  padding: 4px;
+}
+
+form:focus-within { 
+  border-color: orange;  
+  background: none;
+  color: black;
+}
+.myClickState {
+  border-color: lime;
+}
+.search-bar button img {
+  width: 25px;
+}
+.search-bar button {
+  background: none;
+  opacity: 0.4;
+  border: 0;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 0px;
+  cursor: pointer; 
+}
+.lens img {
+  width: 120px;
+  height: 30px;
+}
+.clear img{
+  width: 5px;  
+  height: 20px;     
+}
+.lens:hover {
+  opacity: 1;
+}
+.clear:hover {
+  opacity: 1;
+}
+.lens img:focus {
+  border-color: none; 
+}
+.clear img:focus {
+  border-color: none; 
+  outline: none;
+}
+
+.artistsListContainer {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  vertical-align: top;
+  word-wrap: break-word; 
+}
+.artistsContainer {
+  display: flex;
+  overflow-x: auto;
+  width: 1200px;   
+  word-wrap: break-word;  
+}
+.artistsContainer ul { 
+  display: flex;
+  width: 1200px;
+}
+.artistsContainer ul button {
+  margin-right: 7px;  
+  width: 260px; 
+  background-color: #205375;
+  list-style-type: none;
+  overflow: initial; 
+} 
+.artistsContainer::-webkit-scrollbar {
+  width: 2px;
+}
+
+.artistsContainer::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.artistsContainer::-webkit-scrollbar-thumb { 
+  background: rgb(195, 192, 192);
+}
+
+.artistsContainer::-webkit-scrollbar-thumb:hover {
+  background: rgb(143, 142, 142);
+}
+
+.artistsContainer ul button:hover {
+  background-color: #112b3c;
+}
+.artistsContainer ul button img {
+  width: 220px;
+  height: 220px;
+  margin-top: 20px; 
+  margin-right: 8px;
+  margin-left: 8px;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 50%;
+  border-color: white;    
+}
+.artistsContainer ul button div {     
+  font-weight: normal;
+  font-size: 22px;
+  margin-top: 15px;
+  margin-left: 26px; 
+  width: 200px; 
+  color: white;  
+  margin-bottom: 30px; 
+  height:auto;  
+}
+#gif1{ 
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  margin-top: 8%;    
+}
+#gif1 img{  
+  visibility: hidden;    
+  width: 40px;
+  height: 60px; 
+}
+#emptydiv {
+  display: flex;
+  width: 680px; 
+  border-radius: 20px; 
+  margin-top: 0px; 
+  padding: 10px;
+  height: 35px;
+  background-color: rgba(211, 210, 210, 0.849);   
+  font-size: 20px;
+  margin: auto;
+  align-items: center;
+  text-align: center; 
+  justify-content: center; 
+}
+#artistInfoContainer { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#artistBio {
+  justify-content: center; 
+  width: 900px;  
+  height: 800px;
+  text-align: center;
+  background: none;
+  margin: auto;    
+  margin-top:15px; 
+} 
+
+#loading2{
+  width: 50px;
+  height: 70px;  
+  justify-content: center; 
+}  
+#artistBio h2 { 
+  font-weight: normal; 
+  letter-spacing: -0.2px; 
+}
+
+#artistBio h3 {
+  font-weight: normal;
+}
+#artistBio p {
+  margin-top: 7px; 
+  font-size: 14px;
+  text-align: justify;
+}
