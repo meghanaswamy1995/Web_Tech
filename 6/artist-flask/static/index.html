@@ -9,39 +9,43 @@
   </head>
   <body>
     <header>
-      <p class="header">Artist Search</p> 
-    </header> 
+      <p class="header">Artist Search</p>
+    </header>
 
-    <div class="search-container"> 
-      <form action="" id="searchform" class="search-bar"  onsubmit="searchbutton(event)">  
-        <button class="lens" id="searchButton" >  
-          <img
-            src="images/search_icon.png"
-            alt=""
-          />
+    <div class="search-container">
+      <form
+        action=""
+        id="searchform"
+        class="search-bar"
+        onsubmit="searchbutton(event)"
+      >
+        <button class="lens" id="searchButton">
+          <img src="images/search_icon.png" alt="" />
         </button>
         <input
           type="text"
           id="artist-input"
-          onclick="setborderColor(this.id)"  
-          placeholder="Please enter an artist name."   
+          onclick="setborderColor(this.id)"
+          placeholder="Please enter an artist name."
           required
         />
-        <button type="reset" class="clear" id="clearbutton" onclick="clearborder(this.id)">   
-          <img
-            src="images/clear_icon.png"     
-            alt=""
-          />
+        <button
+          type="reset"
+          class="clear"
+          id="clearbutton"
+          onclick="clearborder(this.id)"
+        >
+          <img src="images/clear_icon.png" alt="" />
         </button>
       </form>
     </div>
 
     <div id="gif1">
-      <img id="loading1" src="images/loading.gif" alt="">  
+      <img id="loading1" src="images/loading.gif" alt="" />
     </div>
 
-    <div class="artistsListContainer"> 
-      <div class="artistsContainer"> 
+    <div class="artistsListContainer">
+      <div class="artistsContainer">
         <ul id="artistsList"></ul>
       </div>
     </div>
@@ -49,19 +53,21 @@
     <!-- <div id="gif2">
       <img id="loading2" src="images/loading.gif" alt="">  
     </div>  -->
-    
-    <div id="artistInfoContainer">
-      <div id="artistBio"></div>  
-    </div> 
 
-    <footer> 
+    <div id="artistInfoContainer">
+      <div id="artistBio"></div>
+    </div>
+
+    <footer>
       <div class="footer">
         <p class="foot">
-          <a href="https://www.artsy.net/"> Powered by <img src="images/artsy_logo.svg" /> Artsy </a> 
+          <a href="https://www.artsy.net/">
+            Powered by <img src="images/artsy_logo.svg" /> Artsy
+          </a>
         </p>
       </div>
-    </footer> 
-    <script src="index.js"></script>  
+    </footer>
+    <script src="index.js"></script>
     <!-- <script src="index.js"></script> -->
   </body>
 </html>

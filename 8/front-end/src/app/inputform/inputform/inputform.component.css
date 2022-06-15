@@ -1,0 +1,115 @@
+.row {
+  margin-top: 1%;
+}
+.row .form-group {
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 75%;
+  margin-top: 1rem;
+}
+#submit-button {
+  background-color: rgb(23, 70, 131);
+  border-radius: 5px;
+  margin-right: 0.4%;
+  border: none;
+}
+#clear-button {
+  background-color: rgb(100, 98, 98);
+  border-radius: 5px;
+  border: none;
+}
+.spinner-border {
+  margin-left: 5px;
+  margin-right: none;
+}
+
+#artistListContainer {
+  display: flex;
+  margin: auto;
+  margin-top: 1.5rem;
+  width: 100%;
+  overflow-x: auto;
+  border: none;
+  padding: 0;
+  height: 29%;
+}
+#artistListContainer::-webkit-scrollbar {
+  width: 2px;
+}
+
+#artistListContainer::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+#artistListContainer::-webkit-scrollbar-thumb {
+  background: rgb(195, 192, 192);
+}
+
+#artistListContainer::-webkit-scrollbar-thumb:hover {
+  background: rgb(143, 142, 142);
+}
+
+#artistListContainer ul {
+  display: flex;
+  width: 100%;
+  padding: 0px;
+  margin-bottom: 0px;
+}
+#artistListContainer ul button {
+  background-color: #205375;
+  list-style-type: none;
+  width: 200px;
+  border: none;
+  padding: 0px;
+  margin: 1px;
+}
+#artistListContainer ul button:hover {
+  background-color: #112b3c;
+}
+/* #artistListContainer ul button .card :hover {
+  background-color: #112b3c;
+} */
+.artists {
+  border: none;
+  background-color: #205375;
+  padding: 0;
+  border-radius: 0px;
+  margin-right: 1px;
+}
+
+/* .card {
+  border: none;
+  width: 15rem;
+
+  background-color: #205375;
+}
+.card img {
+  max-width: 250px;
+}
+.card-footer {
+  margin-top: 0.5rem;
+  border: none;
+  text-align: left;
+  height: 4rem;
+  color: white;
+} */
+#artistListContainer ul button div {
+  width: 90%;
+  height: 20%;
+  color: white;
+  text-align: left;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 8px;
+  padding: 0 5px;
+}
+#artistListContainer ul button img {
+  width: 200px;
+  height: 200px;
+}
+.alert {
+  width: 80%;
+  margin: auto;
+  margin-top: 1rem;
+}

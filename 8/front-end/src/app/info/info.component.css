@@ -1,0 +1,166 @@
+.container {
+  width: 90%;
+  margin: auto;
+  margin-top: 2%;
+  padding: 0;
+  border: none;
+  margin-bottom: 20%;
+}
+.nav li {
+  width: 50%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.nav-tabs {
+  border: none;
+}
+.nav-tabs .nav-link.active {
+  background-color: #205375;
+  color: white;
+}
+.nav-tabs .nav-link {
+  color: black;
+  border: none;
+}
+.tab-content {
+  margin-top: 2rem;
+  margin-bottom: 10%;
+}
+.tab-pane {
+  margin-bottom: 15rem;
+}
+#artistInfo {
+  justify-content: center;
+  text-align: center;
+  margin-top: 15px;
+  height: auto;
+  /* margin-bottom: 50px; */
+}
+#artistInfo h3 {
+  font-size: 18px;
+  font-weight: normal;
+}
+#artistInfo h4 {
+  margin-top: none;
+  font-size: 15px;
+  font-weight: normal;
+}
+#artistInfo p {
+  text-align: justify;
+  margin: auto;
+  margin-top: 10px;
+  font-size: 14px;
+  padding-bottom: 15%;
+}
+
+#artwork ul {
+  padding-bottom: 5%;
+  display: flex;
+  flex-wrap: wrap;
+}
+#artwork-card-footer {
+  margin-top: 10rem;
+}
+#artwork ul .card {
+  margin-bottom: 2rem;
+}
+#artwork ul div button {
+  width: 80%;
+  height: 2rem;
+  background-color: #205375;
+  border: none;
+  color: white;
+  border-radius: 3px;
+}
+
+.alert {
+  margin-top: 2%;
+}
+.categoriesAlert {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-top: 1rem;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+/* ---------------------------------------------------- */
+
+.modal {
+  margin: 0px;
+  padding: 0px;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-dialog {
+  margin: 0px;
+  padding: 0px;
+  max-width: 900px;
+  margin: auto;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  display: flex;
+  align-items: center;
+}
+
+.modal-header {
+  height: 100px;
+  max-height: 100px;
+  max-width: 900px;
+}
+.header-img {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  margin-left: 3%;
+}
+.header-img img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.gene-title {
+  font-size: 17px;
+  margin-left: 3%;
+}
+
+.modal-content {
+  padding: 0px;
+  display: flex;
+  width: 95%;
+  margin: auto;
+}
+.modal-body {
+  display: flex;
+  max-width: 900px;
+  flex-wrap: wrap;
+}
+
+.catSpinner {
+  margin: auto;
+  justify-content: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+.infoSpinner {
+  margin: auto;
+  justify-content: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 50%;
+}
+.card-footer {
+  border: none;
+  background-color: rgba(245, 245, 245, 0);
+  text-align: center;
+}
+.card {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}

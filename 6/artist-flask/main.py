@@ -40,7 +40,7 @@ def searchArtists(name):
 
     newHeader = {
         'X-XAPP-Token': AUTH_TOKEN 
-    }
+    } 
     #target = "picasso"
     url = "https://api.artsy.net/api/search?q="+name+"&size=10"   
 

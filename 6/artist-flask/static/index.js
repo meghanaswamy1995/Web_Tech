@@ -12,7 +12,7 @@ const loadCharacters = async (target) => {
 
       // Making our connection  
       //var url = 'http://localhost:8080/search/artists/'+target;    
-      var url = 'http://artistsweb-351508.wl.r.appspot.com/search/artists/'+target;
+      var url = 'http://artistsweb-351508.wl.r.appspot.com/search/artists/'+target; 
       
       xhr.open('GET', url, true);
       let result; 
@@ -75,13 +75,13 @@ const displayArtistInfo = (info)=>{
  const artistInfoContainer = document.getElementById('artistInfoContainer'); 
  //document.getElementById("loading2").style.visibility="hidden"; 
  artistInfoContainer.style.visibility="visible";  
- artistInfoContainer.innerHTML=newdiv;    
+ artistInfoContainer.innerHTML=newdiv;
 };
 
 const displayCharacters = (characters) => {
   let count=0; 
 
-   const htmlString = characters._embedded.results.map((character) => { 
+   const htmlString = characters._embedded.results.map((character) => {
           let artistId="";
           if(character.og_type == "artist"){  
             count++;  
@@ -95,7 +95,7 @@ const displayCharacters = (characters) => {
             }
             return `
                   <button class="artists" id="${artistId}" type="button" onclick="getArtist(this.id)">  
-                      <img src="${artImg}"></img>   
+                      <img src="${artImg}"></img>
                       <div>${character.title}</div>   
                   </button> 
               `;
@@ -110,7 +110,7 @@ const displayCharacters = (characters) => {
       var htmlstr='<div id="emptydiv">No results found.</div>'; 
       const artistinfo = document.getElementById('artistInfoContainer').style.visibilty = "hidden"; 
       loadcount=0 ;
-      artistsList.innerHTML = htmlstr;       
+      artistsList.innerHTML = htmlstr;     
       } 
 };
 

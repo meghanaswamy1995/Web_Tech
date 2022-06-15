@@ -1,0 +1,15 @@
+.navbar {
+  margin-top: 50px;
+}
+
+.footer-link {
+  color: rgba(178, 177, 179, 0.979);
+  text-decoration: none;
+}
+.footer-link:hover {
+  color: rgba(178, 177, 179, 0.979);
+}
+.footer-link img {
+  width: 20px;
+  height: 20px;
+}

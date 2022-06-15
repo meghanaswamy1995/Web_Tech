@@ -1,0 +1,110 @@
+<div class="infoSpinner">
+  <span
+    class="spinner-border"
+    role="status"
+    aria-hidden="true"
+    id="spinner"
+    *ngIf="showInfoSpinner"
+  ></span>
+</div>
+<div class="container" id="info-container" *ngIf="showOutput">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" data-bs-toggle="tab" href="#artistInfo"
+        >Artist Info</a
+      >
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-bs-toggle="tab" href="#artwork">Artwork</a>
+    </li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="artistInfo" class="tab-pane active">
+      <h3>{{ artistBasic }}</h3>
+      <h4>{{ nationality }}</h4>
+      <p>{{ biography }}</p>
+    </div>
+    <div id="artwork" class="tab-pane">
+      <div class="alert alert-danger" role="alert" *ngIf="artworksNull">
+        No artworks.
+      </div>
+      <ul>
+        <div
+          class="card text-center"
+          *ngFor="let artwork of artworksList"
+          style="width: 14rem"
+        >
+          <img src="{{ artwork[3] }}" class="card-img-top" alt="..." />
+          <div class="card-footer mt-auto" id="artwork-card-footer">
+            {{ artwork[1] }}
+            <br />
+            {{ artwork[0] }}
+            <br />
+            <button
+              class="categorybutton"
+              id="{{ artwork[2] }}"
+              type="button"
+              (click)="openWindow($event)"
+            >
+              Categories
+            </button>
+          </div>
+        </div>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="categoriesWindow" tabindex="-1">
+  <div class="modal-dialog model-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="header-img">
+          <img src="{{ selectedImgimg }}" alt="" />
+        </div>
+        <div class="gene-title">
+          <p class="modal-title">{{ selectedImgtitle }}</p>
+          <p class="modal-title">{{ selectedImgdate }}</p>
+        </div>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          (click)="closeWindow()"
+        ></button>
+      </div>
+      <div class="categoriesAlert" *ngIf="categoriesNull">
+        <div class="alert alert-danger" role="alert" *ngIf="categoriesNull">
+          No categories.
+        </div>
+      </div>
+      <div class="catSpinner" *ngIf="showCatLoad">
+        <span
+          class="spinner-border"
+          role="status"
+          aria-hidden="true"
+          id="spinner"
+          *ngIf="showCatLoad"
+        ></span>
+      </div>
+      <div class="modal-body" *ngIf="showGeneBody">
+        <div
+          class="card text-center"
+          *ngFor="let gene of genes"
+          style="width: 15rem"
+        >
+          <img
+            src="{{ gene._links.thumbnail.href }}"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-footer mt-auto">
+            {{ gene.name }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
