@@ -100,11 +100,11 @@ const displayCharacters = (characters) => {
                   </button> 
               `;
           }
-      }).join('');  
+      }).join('');
       document.getElementById("artistInfoContainer").style.visibility="hidden";
       document.getElementById("loading1").style.visibility="hidden"; 
       artistsList.style.visibility="visible"; 
-      artistsList.innerHTML = htmlString;
+      artistsList.innerHTML = htmlString; 
 
       if(count==0){
       var htmlstr='<div id="emptydiv">No results found.</div>'; 
@@ -114,20 +114,20 @@ const displayCharacters = (characters) => {
       } 
 };
 
-const getAuthentication = async (target) => {  
+const getAuthentication = async (target) => {
   let authjson = [];
   let authUrl="https://api.artsy.net/api/tokens/xapp_token?client_id=120872502231defb0204&client_secret=45b6764ebca39b6f9613372a3eb45577";
   const auth = await fetch(authUrl, 
     { method :'POST'
     }); 
-    authjson = await auth.json(); 
+    authjson = await auth.json();
     authToken = authjson.token; 
 }
 
 const artistInput=document.getElementById('artist-input');  
 let artiststarget="";
 var tasks = [];
-artistInput.addEventListener('input', (e) =>{ 
+artistInput.addEventListener('input', (e) =>{  
   artiststarget=e.target.value;  
 });
 
