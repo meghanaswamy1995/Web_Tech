@@ -35,30 +35,30 @@ export class ArtistSvcService {
     return this.subject.asObservable();
   } 
 
-  getArtists(val:string){
+  getArtists(val:string){ 
     
-    let url="http://localhost:8080/search/artists/"+val+"/";
-    //let url="http://nodejssample-353307.wl.r.appspot.com/search/artists/"+val+"/";    
+    //let url="http://localhost:8080/search/artists/"+val+"/"; 
+    let url="http://webapp-353423.wl.r.appspot.com/search/artists/"+val+"/"; 
    
     return this.htttpClient.get(url) 
   }
 
   getInfo(id:string){
     ///get/artist/:id/
-    let infourl="http://localhost:8080/get/artist/"+id+"/"; 
-    //let infourl="http://nodejssample-353307.wl.r.appspot.com/get/artist/"+id+"/";
+    //let infourl="http://localhost:8080/get/artist/"+id+"/"; 
+    let infourl="http://webapp-353423.wl.r.appspot.com/get/artist/"+id+"/"; 
     return this.htttpClient.get(infourl)  
   }
 
   getArtworks(artistId:string){
-    let artworkurl="http://localhost:8080/get/artist/artwork/"+artistId+"/"; 
-    //let artworkurl="http://nodejssample-353307.wl.r.appspot.com/get/artist/artwork/"+artistId+"/";
+    //let artworkurl="http://localhost:8080/get/artist/artwork/"+artistId+"/"; 
+    let artworkurl="http://webapp-353423.wl.r.appspot.com/get/artist/artwork/"+artistId+"/";
     return this.htttpClient.get(artworkurl) 
   }
 
   getCategories(artId:string){
-    let categoryurl="http://localhost:8080/get/artwork/"+artId+"/"; 
-    //let categoryurl="http://nodejssample-353307.wl.r.appspot.com/get/artwork/"+artId+"/";
+    //let categoryurl="http://localhost:8080/get/artwork/"+artId+"/"; 
+    let categoryurl="http://webapp-353423.wl.r.appspot.com/get/artwork/"+artId+"/";
     return this.htttpClient.get(categoryurl); 
-  }  
+  } 
 }

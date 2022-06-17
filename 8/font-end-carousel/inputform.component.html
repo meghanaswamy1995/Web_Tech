@@ -1,0 +1,107 @@
+<form class="row g-3">
+  <div class="form-group">
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="inputsearchbar"
+      name="inputsearchbar"
+      #inputbar
+      aria-label="Default"
+      aria-describedby="inputGroup-sizing-default"
+      placeholder="Please enter an artist name."
+      (keyup)="onKeypressEvent(inputbar.value)"
+    />
+  </div>
+  <div class="form-group text-center">
+    <button
+      id="submit-button"
+      class="btn btn-primary button--loading"
+      type="submit"
+      [disabled]="!isinput"
+      (click)="searchArtist()"
+    >
+      <span class="sr-only">Submit</span>
+      <span
+        class="spinner-border spinner-border-sm"
+        role="status"
+        id="spinner"
+        *ngIf="isLoad"
+      ></span>
+    </button>
+    <input
+      id="clear-button"
+      class="btn btn-primary"
+      type="reset"
+      value="Clear"
+      [disabled]="!isinput"
+      (click)="clearInput()"
+    />
+  </div>
+</form>
+
+<div class="alert alert-danger" role="alert" *ngIf="artistsNull">
+  No results.
+</div>
+
+<!-- <div class="container" id="artistListContainer" *ngIf="loadArtistList">
+  <ul id="artistListUl">
+    <button
+      *ngFor="let artist of jsonobj"
+      class="artists"
+      id="{{ artist.id }}"
+      type="button"
+      (click)="getArtist($event)"
+    >
+      <img src="{{ artist.image }}" />
+      <div>{{ artist.title }}</div>
+    </button>
+  </ul>
+</div> -->
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div
+      class="carousel-item"
+      *ngFor="let artist of jsonobj; let i = index"
+      [class.active]="i == 0"
+    >
+      <img
+        id="{{ artist.id }}"
+        src="{{ artist.image }}"
+        class="w-100 h-100"
+        alt=""
+        (click)="getArtist($event)"
+      />
+      <div class="carousel-caption">
+        <button
+          class="carousel-btn"
+          type="button"
+          id="{{ artist.id }}"
+          (click)="getArtist($event)"
+        >
+          {{ artist.title }}
+        </button>
+
+        <!-- <h3 style="color: rgb(238, 229, 229)">{{ artist.title }}</h3> -->
+      </div>
+    </div>
+  </div>
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExampleIndicators"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExampleIndicators"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>

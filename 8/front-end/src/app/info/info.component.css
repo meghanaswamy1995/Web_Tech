@@ -24,7 +24,7 @@
   border: none;
 }
 .tab-content {
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 10%;
 }
 .tab-pane {
@@ -33,17 +33,17 @@
 #artistInfo {
   justify-content: center;
   text-align: center;
-  margin-top: 15px;
+  margin-top: 1%;
   height: auto;
   /* margin-bottom: 50px; */
 }
 #artistInfo h3 {
-  font-size: 18px;
+  font-size: 19px;
   font-weight: normal;
 }
 #artistInfo h4 {
   margin-top: none;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: normal;
 }
 #artistInfo p {
@@ -125,7 +125,7 @@
 
 .gene-title {
   font-size: 17px;
-  margin-left: 3%;
+  margin-left: 1.5%;
 }
 
 .modal-content {

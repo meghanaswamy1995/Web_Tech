@@ -28,13 +28,13 @@
   display: flex;
   margin: auto;
   margin-top: 1.5rem;
-  width: 100%;
+  width: 95%;
   overflow-x: auto;
   border: none;
   padding: 0;
   height: 29%;
 }
-#artistListContainer::-webkit-scrollbar {
+/* #artistListContainer::-webkit-scrollbar {
   width: 2px;
 }
 
@@ -48,7 +48,7 @@
 
 #artistListContainer::-webkit-scrollbar-thumb:hover {
   background: rgb(143, 142, 142);
-}
+} */
 
 #artistListContainer ul {
   display: flex;
@@ -56,14 +56,15 @@
   padding: 0px;
   margin-bottom: 0px;
 }
-#artistListContainer ul button {
+#artistListContainer ul .artists {
   background-color: #205375;
   list-style-type: none;
-  width: 200px;
+  width: 220px;
   border: none;
   padding: 0px;
   margin: 1px;
 }
+
 #artistListContainer ul button:hover {
   background-color: #112b3c;
 }
@@ -78,7 +79,7 @@
   margin-right: 1px;
 }
 
-/* .card {
+.card {
   border: none;
   width: 15rem;
 
@@ -93,10 +94,11 @@
   text-align: left;
   height: 4rem;
   color: white;
-} */
+}
+
 #artistListContainer ul button div {
   width: 90%;
-  height: 20%;
+  height: 18%;
   color: white;
   text-align: left;
   margin-top: 15px;
@@ -105,9 +107,10 @@
   padding: 0 5px;
 }
 #artistListContainer ul button img {
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
 }
+
 .alert {
   width: 80%;
   margin: auto;

@@ -1,0 +1,97 @@
+.row {
+  margin-top: 1%;
+}
+.row .form-group {
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 75%;
+  margin-top: 1rem;
+}
+#submit-button {
+  background-color: rgb(23, 70, 131);
+  border-radius: 5px;
+  margin-right: 0.4%;
+  border: none;
+}
+#clear-button {
+  background-color: rgb(100, 98, 98);
+  border-radius: 5px;
+  border: none;
+}
+.spinner-border {
+  margin-left: 5px;
+  margin-right: none;
+}
+
+.alert {
+  width: 80%;
+  margin: auto;
+  margin-top: 1rem;
+}
+/* ------------------------Carousel--------------------------------- */
+.carousel {
+  margin: auto;
+  margin-top: 3rem;
+  width: 30%;
+  /* height: 400px; */
+  margin-bottom: 3rem;
+}
+
+@media screen and (max-width: 767px) {
+  .carousel {
+    width: 80%;
+  }
+
+  .carousel-caption .carousel-btn {
+    font-size: small;
+    /* margin: auto; */
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+  }
+}
+.carousel-inner::after {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: rgb(44, 43, 43);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  opacity: 0.2;
+  z-index: 0;
+}
+.carousel-inner .carousel-item .carousel-caption {
+  z-index: 10;
+}
+
+.carousel-inner {
+  max-width: 100%;
+  max-height: 100%;
+}
+.carousel-inner img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.carousel-caption {
+  margin: auto;
+  width: 60%;
+  height: 8%;
+  padding: 0;
+  opacity: 1;
+  top: 90%;
+  transform: translateY(-80%);
+}
+.carousel-caption .carousel-btn {
+  background-color: #205375;
+  color: white;
+  height: 100%;
+  border: none;
+  padding-bottom: 5px;
+}
+.carousel-caption .carousel-btn:hover {
+  background-color: #112b3c;
+}

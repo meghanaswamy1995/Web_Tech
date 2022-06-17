@@ -24,7 +24,6 @@
       <span
         class="spinner-border spinner-border-sm"
         role="status"
-        aria-hidden="true"
         id="spinner"
         *ngIf="isLoad"
       ></span>
@@ -45,7 +44,7 @@
 </div>
 
 <div class="container" id="artistListContainer" *ngIf="loadArtistList">
-  <ul>
+  <ul id="artistListUl">
     <button
       *ngFor="let artist of jsonobj"
       class="artists"
@@ -53,19 +52,8 @@
       type="button"
       (click)="getArtist($event)"
     >
-      <!-- <div class="card" style="width: 15rem">
-        <img
-          id="{{ artist.id }}"
-          src="{{ artist.image }}"
-          class="card-img-top"
-          alt=""
-        />
-        <div id="{{ artist.id }}" class="card-footer">{{ artist.title }}</div>
-      </div> -->
       <img src="{{ artist.image }}" />
       <div>{{ artist.title }}</div>
     </button>
   </ul>
 </div>
-
-<!-- [style.background]="selected==i?'red':'grey'" -->

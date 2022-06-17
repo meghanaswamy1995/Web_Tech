@@ -8,9 +8,8 @@ import { FooterComponent } from './headerfooter/footer/footer.component';
 import { InputformComponent } from './inputform/inputform/inputform.component';
 import { HttpClientModule } from '@angular/common/http';
 import { InfoComponent } from './info/info.component';
-import { CategoriesmodelComponent } from './categoriesmodel/categoriesmodel.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatDialogModule } from '@angular/material/dialog'
+import { MatDialogModule } from '@angular/material/dialog' 
 
 @NgModule({
   declarations: [
@@ -19,7 +18,6 @@ import { MatDialogModule } from '@angular/material/dialog'
     FooterComponent,
     InputformComponent,
     InfoComponent,
-    CategoriesmodelComponent
   ],
   imports: [
     BrowserModule,

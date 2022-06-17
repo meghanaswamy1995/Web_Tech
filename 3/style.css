@@ -44,8 +44,8 @@ nav {
 
 #picturebox {
   background-image: linear-gradient(
-      rgba(10, 10, 10, 0.267),
-      rgba(36, 34, 31, 0.144)
+      rgba(10, 10, 10, 0.867),
+      rgba(156, 72, 224, 0.863)
     ),
     url(lawyer.jpeg);
   background-size: cover;

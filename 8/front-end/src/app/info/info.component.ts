@@ -41,7 +41,7 @@ export class InfoComponent implements OnInit {
       this.showOutput=false; 
       this.getArtistInfo();
     });
-    this.clickEventSubscription=this.artistSvc.getClearEvent().subscribe(()=>{
+    this.clickEventSubscription=this.artistSvc.getClearEvent().subscribe(()=>{ 
       this.showOutput=false;
       this.artworksNull=false; 
       this.showInfoSpinner=false; 
@@ -50,7 +50,7 @@ export class InfoComponent implements OnInit {
     this.clickEventSubscription=this.artistSvc.getSubmitClearEvent().subscribe(()=>{
       this.showOutput=false; 
       this.artworksNull=false;    
-      this.showInfoSpinner=false;  
+      this.showInfoSpinner=false; 
     });
   }
  

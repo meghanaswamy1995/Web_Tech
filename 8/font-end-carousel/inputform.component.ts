@@ -68,7 +68,7 @@ testjson:any=[];
           if(result.og_type=='artist'){
             artimg=result._links.thumbnail.href;
             if(artimg=="/assets/shared/missing_image.png"){
-              artimg="assets/artsy_logo.svg" 
+              artimg="assets/artsy_logo.svg"
             }
             if(result._links.self.href!=null){ 
               val=result._links.self.href.lastIndexOf('/');
@@ -117,7 +117,7 @@ testjson:any=[];
       val.style.backgroundColor='#112b3c'; 
     }
     this.pickedArtistid=currentid;
-    this.artistSvc.sendClickEvent($event); 
+    this.artistSvc.sendClickEvent($event);
   }
   ngOnInit(): void {  
   
