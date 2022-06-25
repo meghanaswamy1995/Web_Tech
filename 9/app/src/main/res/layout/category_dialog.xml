@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+    <TableRow
+        android:padding="5dp"
+        android:layout_margin="10dp"
+        android:layout_marginTop="0dp">
+
+        <TextView
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Category 1860-1969"
+            android:id="@+id/geneName"
+            android:textSize="22dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:id="@+id/geneImage"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="50dp"
+            app:srcCompat="@drawable/ic_launcher_background" />
+    </TableRow>
+
+
+        <TableRow
+            android:padding="5dp"
+            android:layout_margin="10dp"
+            android:layout_marginTop="0dp">
+
+        <TextView
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Description"
+            android:textSize="22dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/geneDescr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:text="sdasdasdad eqweqweqweqweqwe asdasdasdasdasdasdasdasdasdasdasdasdasdasdasdaweqweqweqweqweqweqweqweqw qweqweqweq qweqweqw"
+            android:textColor="@color/dark_gray"
+            android:textSize="18dp" />
+        </TableRow>
+
+    </TableLayout>
+
+</RelativeLayout>

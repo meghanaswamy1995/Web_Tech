@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CategoryWindow">
+
+<!--    <androidx.appcompat.widget.LinearLayoutCompat-->
+<!--        android:id="@+id/linearLayoutCompat"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/textView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:paddingLeft="20dp"-->
+<!--            android:text="Category"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="22dp"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            tools:ignore="MissingConstraints" />-->
+
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            tools:ignore="MissingConstraints">
+
+            <TableRow
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="0dp">
+            <TextView
+                android:id="@+id/genetitle"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:text="Category"
+                android:textColor="@color/black"
+                android:textSize="19dp"
+                android:textStyle="bold" />
+            </TableRow>
+            <TableRow
+                android:layout_margin="10dp"
+                android:layout_marginTop="0dp">
+
+                <TextView
+                    android:id="@+id/geneName"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:text="1860-1969"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/geneImage"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/ic_launcher_background" />
+            </TableRow>
+
+
+            <TableRow
+                android:layout_margin="10dp"
+                android:layout_marginTop="0dp"
+                >
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Description"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />  
+
+                <TextView
+                    android:id="@+id/geneDescr"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:text="All art,design, decorative art, and architecture produced from roughly 1860 to 1970 "
+                    android:textColor="@color/dark_gray"
+                    android:textSize="16dp" />
+            </TableRow>
+
+        </TableLayout>
+<!--    </androidx.appcompat.widget.LinearLayoutCompat>-->
+</androidx.core.widget.NestedScrollView>

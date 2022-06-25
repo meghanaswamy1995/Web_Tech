@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentDetails"
+    android:orientation="horizontal">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!-- TODO: Update blank fragment layout -->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:id="@+id/tableLayout"
+            android:visibility="invisible">
+
+            <TableRow
+                android:layout_margin="10dp"
+                android:layout_marginTop="0dp"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="210dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Name"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/infoName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:text="name"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="18dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_margin="10dp"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="210dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Nationality"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/infoNationality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:text="nationality"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="18dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_margin="10dp"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="210dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Birthday"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/infoBirth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:text="birthday"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="18dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_margin="10dp"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="210dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Deathday"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/infoDeath"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:text="deathday"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="18dp" />
+            </TableRow>
+            <!--        <TableRow-->
+            <!--            android:padding="5dp"-->
+            <!--            android:layout_marginTop="10dp"-->
+            <!--            android:id="@+id/bioSpinnerRow">-->
+
+            <!--            <ProgressBar-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="match_parent"-->
+            <!--                android:id="@+id/bioSpinner"-->
+            <!--                android:layout_gravity="center"-->
+            <!--                android:layout_marginTop="10dp"-->
+            <!--                android:layout_marginLeft="60dp"-->
+            <!--                android:background="#F5F5F5"-->
+            <!--                android:indeterminateTint="@color/art_blue" />-->
+            <!--        </TableRow>-->
+
+            <TableRow
+                android:layout_margin="10dp"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="210dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Biography"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/infoBio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:text="sdasdasdad eqweqweqweqweqwe asdasdasdasdasdasdasdasdasdasdasdasdasdasdasdaweqweqweqweqweqweqweqweqw qweqweqweq qweqweqw"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="18dp" />
+            </TableRow>
+        </TableLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/bioSpinner"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="250dp"
+        android:padding="20dp"
+        android:layout_marginLeft="150dp"
+        android:indeterminateTint="@color/art_blue" />
+</RelativeLayout>

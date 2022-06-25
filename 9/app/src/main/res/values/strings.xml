@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ArtistSearch</string>
+    <string name="search">Start Search</string>
+    <string name="title_activity_artist_info">ArtistInfo</string>
+    <string name="tab_text_1">Details</string>
+    <string name="tab_text_2">Artwork</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
