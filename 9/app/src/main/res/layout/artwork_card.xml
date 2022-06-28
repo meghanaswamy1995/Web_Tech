@@ -16,7 +16,7 @@
         android:elevation="3dp"
         card_view:cardUseCompatPadding="true"
         android:layout_margin="40dp"
-        card_view:cardElevation="6dp"
+        card_view:cardElevation="0dp"
         android:background="@color/white"
         card_view:cardCornerRadius="1dp"
         >
@@ -42,9 +42,11 @@
         <ImageView
             android:id="@+id/artworkImage"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="260dp"
             android:layout_below="@id/artworkName"
             android:layout_marginTop="20dp"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"

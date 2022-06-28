@@ -44,14 +44,20 @@ public class MainActivity2 extends AppCompatActivity {
     RecyclerView favRecyclerView;
     FavAdapter favAdapter;
     private boolean spinFlag=false;
+    private String searchedquery="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.d("checkspin","spinFlag1: "+spinFlag);
+        if(savedInstanceState != null){
+            searchedquery = savedInstanceState.getString("searchQuery");
+        }
         super.onCreate(savedInstanceState);
         setTheme(R.style.Theme_ArtistSearch);
-        getSupportActionBar().hide();
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main2);
+
+        Log.d("queryStr", searchedquery);
+
         String date = new SimpleDateFormat("dd MMMM yyyy").format(new Date());
         TextView textViewDate = findViewById(R.id.dateBar);
         textViewDate.setText(date);
@@ -59,42 +65,7 @@ public class MainActivity2 extends AppCompatActivity {
         favRecyclerView=findViewById(R.id.favRecyclerView);
 
         addFavouritesSection();
-        //loadSharedPref();
 
-        TextView datebar = (TextView) findViewById(R.id.dateBar);
-        TextView favheader = (TextView) findViewById(R.id.favHeader);
-        TextView favBar = (TextView) findViewById(R.id.favheader1);
-        TextView favBar2 = (TextView) findViewById(R.id.favheader2);
-        ProgressBar spinner = (ProgressBar)  findViewById(R.id.mainSpinner);
-
-        Log.d("checkspin","spinFlag2: "+spinFlag);
-
-        if(spinFlag==false) {
-            final Handler handler = new Handler();
-            handler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    Log.d("checkspin","spinFlag3: "+spinFlag);
-                    getSupportActionBar().show();
-                    datebar.setVisibility(View.VISIBLE);
-                    favheader.setVisibility(View.VISIBLE);
-                    favBar.setVisibility(View.VISIBLE);
-                    favBar2.setVisibility(View.VISIBLE);
-                    favRecyclerView.setVisibility(View.VISIBLE);
-                    spinner.setVisibility(View.GONE);
-                }
-            }, 1000);
-        }
-        else{
-            Log.d("checkspin","spinFlag4: "+spinFlag);
-            getSupportActionBar().show();
-            datebar.setVisibility(View.VISIBLE);
-            favheader.setVisibility(View.VISIBLE);
-            favBar.setVisibility(View.VISIBLE);
-            favBar2.setVisibility(View.VISIBLE);
-            favRecyclerView.setVisibility(View.VISIBLE);
-            spinner.setVisibility(View.GONE);
-        }
         Button artsy = (Button)findViewById(R.id.artsyButton);
         artsy.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -114,8 +85,9 @@ public class MainActivity2 extends AppCompatActivity {
         // TODO Auto-generated method stub
         super.onResume();
         loadSharedPref();
-
     }
+
+
     private void loadSharedPref(){
         fav_artistList.clear();
         SharedPreferences  mPrefs = getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);
@@ -154,18 +126,21 @@ public class MainActivity2 extends AppCompatActivity {
             MenuInflater inflater=getMenuInflater();
             inflater.inflate(R.menu.main_menu, menu);
             // loadSharedPref();
-            SearchManager searchManager = (SearchManager)getSystemService(Context.SEARCH_SERVICE);
+           // SearchManager searchManager = (SearchManager)getSystemService(Context.SEARCH_SERVICE);
             SearchView searchView = (SearchView) menu.findItem(R.id.search).getActionView();
-
+           // searchView.hasFocus()="true";
             searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
                 @Override
                 public boolean onQueryTextSubmit(String query) {
+                    searchedquery=query;
                     openArtistListActivity(query);
                     return true;
                 }
 
                 @Override
                 public boolean onQueryTextChange(String newText) {
+
+                    //searchedquery=newText;
                     return false;
                 }
             });
@@ -179,10 +154,21 @@ public class MainActivity2 extends AppCompatActivity {
     public void openArtistListActivity(String artistName){
         spinFlag=true;
         Intent intent = new Intent(this,ArtistListActivity.class);
-
-        //Intent intent = new Intent(this,ArtistInfoActivity.class);
         intent.putExtra("artistName",artistName);
         startActivity(intent);
+    }
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        String myString = savedInstanceState.getString("searchQuery");
+    }
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.d("instance state", "---------------");
+        Log.d("instance state", searchedquery);
+        outState.putString("searchQuery", searchedquery);
+
     }
 
 }

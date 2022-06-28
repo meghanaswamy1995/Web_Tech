@@ -17,10 +17,20 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
+            android:id="@+id/artsyimg"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:src="@drawable/ic_artsy_seeklogo_com"
             android:layout_gravity="center"/>
+
+        <ProgressBar
+            android:id="@+id/minSpinner"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/art_blue"
+            android:padding="20dp"
+            android:visibility="invisible"/>
     </androidx.cardview.widget.CardView>
 
     <!--    <ImageView-->

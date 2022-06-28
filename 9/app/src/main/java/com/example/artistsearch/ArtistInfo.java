@@ -269,8 +269,9 @@ private ActivityArtistInfo2Binding binding;
                             TextView emptyView = (TextView) findViewById(R.id.emptyartwork);
                             if(artwork_list.size()!=0){
                                 Log.d("test-test","size of the list: "+artwork_list.size());
-
-                                emptyView.setVisibility(View.GONE);
+                                if(emptyView!=null) {
+                                    emptyView.setVisibility(View.GONE);
+                                }
                                 recyclerView = (RecyclerView) findViewById(R.id.artwork_recycler_view);
                                 if(recyclerView!=null) {
                                     recyclerView.setVisibility(View.VISIBLE);

@@ -48,7 +48,7 @@ public class FavAdapter extends RecyclerView.Adapter<FavAdapter.ViewHolder> {
             public void onClick(View view) {
                 Log.d("test-test", "testing onclick "+ artistdata.getArtistName());
                 String artistId = artistdata.getArtistId();
-                Toast.makeText(view.getContext(),artistdata.getArtistId(), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(view.getContext(),artistdata.getArtistId(), Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(context, ArtistInfo.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

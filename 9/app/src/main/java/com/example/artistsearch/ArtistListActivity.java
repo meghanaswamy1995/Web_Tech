@@ -58,7 +58,6 @@ public class ArtistListActivity extends AppCompatActivity {
             Log.d("test-test","artistName is null "+ prevSearch);
         }
         else{
-
             prevSearch=artistName;
             Log.d("test-test","artistName is not null, setting prevSearch "+ prevSearch);
         }
@@ -74,10 +73,10 @@ public class ArtistListActivity extends AppCompatActivity {
         }
 
         ActionBar actionBar = getSupportActionBar();
-        if(actionBar!=null){
+//        if(actionBar!=null){
             actionBar.setTitle(actionName);
-            actionBar.setDisplayHomeAsUpEnabled(true);
-        }
+           // actionBar.setDisplayHomeAsUpEnabled(true);
+       // }
 
 
 
@@ -178,6 +177,6 @@ public class ArtistListActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Log.d("backtest", "testing back press");
+        finish();
     };
 }

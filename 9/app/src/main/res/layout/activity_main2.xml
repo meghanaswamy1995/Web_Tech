@@ -11,9 +11,9 @@
             android:id="@+id/dateBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="6dp"
+            android:layout_marginLeft="5dp"
             android:padding="7sp"
-            android:text="Hello World!"
+            android:text="     Hello World!"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -21,8 +21,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.018"
-            android:visibility="invisible"/>
+            app:layout_constraintVertical_bias="0.018"/> 
 
         <TextView
             android:id="@+id/favheader1"
@@ -31,8 +30,7 @@
             android:layout_below="@+id/dateBar"
             android:layout_marginTop="1dp"
             android:background="#CCCCCC"
-            app:layout_constraintBottom_toTopOf="@+id/favHeader"
-            android:visibility="invisible"/>
+            app:layout_constraintBottom_toTopOf="@+id/favHeader"/>
 
         <TextView
             android:id="@+id/favHeader"
@@ -43,24 +41,21 @@
             android:background="@color/material_on_primary_emphasis_high_type"
             android:backgroundTint="@color/gray"
             android:padding="5dp"
-            android:text="FAVOURITES"
+            android:text="   FAVOURITES"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@+id/dateBar"
-            tools:layout_editor_absoluteX="-16dp"
-            android:visibility="invisible"
-            />
+            tools:layout_editor_absoluteX="-16dp" />
 
         <TextView
             android:id="@+id/favheader2"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="1.5dp"
             android:layout_below="@+id/favHeader"
             android:layout_marginTop="-1dp"
             android:background="#CCCCCC"
-            app:layout_constraintTop_toBottomOf="@+id/favHeader"
-            android:visibility="invisible"/>
+            app:layout_constraintTop_toBottomOf="@+id/favHeader"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/favRecyclerView"
@@ -68,8 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/favHeader"
             android:background="@color/white"
-            android:layout_marginTop="0dp"
-            android:visibility="invisible">
+            android:layout_marginTop="0dp">
 
         </androidx.recyclerview.widget.RecyclerView>
 
@@ -88,17 +82,7 @@
             android:text="Powered by Artsy"
             android:textAllCaps="false"
             android:textColor="@color/dark_gray"
-            android:textStyle="italic"
-            android:visibility="invisible"/>
-        <ProgressBar
-            android:id="@+id/mainSpinner"
-            android:layout_width="90dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="250dp"
-            android:padding="20dp"
-            android:layout_marginLeft="150dp"
-            android:indeterminateTint="@color/art_blue" />
+            android:textStyle="italic" />
 
 
     </RelativeLayout>
